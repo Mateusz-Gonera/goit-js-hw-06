@@ -1,5 +1,10 @@
 const ulCategories = document.querySelector("ul#categories");
-const tagH2 = document.querySelector("li.item h2");
+const listItem = document.querySelectorAll("li.item");
+const arrH2 = Array.from(listItem);
 console.log(`Number of categories: ${ulCategories.children.length}`);
-console.log(tagH2.textContent);
-console.log();
+const mapArrH2 = arrH2.map(element => {
+      return console.log(`Category: ${element.firstElementChild.textContent} 
+Elements: ${element.lastElementChild.children.length}`);
+});
+
+
