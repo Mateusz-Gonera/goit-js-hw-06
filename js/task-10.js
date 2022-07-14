@@ -3,9 +3,14 @@ function getRandomHexColor() {
 }
 const input = document.querySelector("input");
 const boxes = document.querySelector("div#boxes");
-const amount = input.value;
 const createBoxes = (amount) => {
-  
+  const box = document.createElement("div");
+  box.style.backgroundColor = `${getRandomHexColor()}`;
+  box.style.height = "30px";
+  box.style.width = "30px";
+  boxes.append(box);
+  console.log(box);
 
 };
-console.log(boxes);
+
+createBoxes(input.value);
