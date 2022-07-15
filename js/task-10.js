@@ -15,15 +15,13 @@ const createBoxes = (amount) => {
   
   boxes.insertAdjacentHTML("afterbegin", box);
 };
+const destroyBoxes = () => {
+  while (boxes.firstChild) {
+    boxes.firstChild.remove();
+  }  
+};
 btnCreate.addEventListener("click", (event) => {
   createBoxes(input.value);
 });
-const destroyBoxes = () => {
-  while (boxes.firstChild) {
-    boxes.remove();
-  }
-  
-};
 btnDestroy.addEventListener("click", destroyBoxes);
 
-console.log();
